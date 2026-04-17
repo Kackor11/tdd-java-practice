@@ -1,0 +1,14 @@
+# Compiled class files and build folder
+target/
+*.class
+
+# IDE Settings
+.vscode/
+.metals/
+.bloop/
+.idea/
+*.iml
+
+# Sys files
+.DS_Store
+Thumbs.db
