@@ -41,4 +41,27 @@ class QueueTest {
         assertEquals(30, queue.head.next.next.value, "Third element should have value 30");
     }
 
+    @Test
+    void shouldReturnCorrectValueOnDequeue() {
+        Queue<Integer> queue = new Queue<>();
+        
+        queue.enqueue(100);
+        queue.enqueue(200);
+
+        Integer result = queue.dequeue();
+
+        assertEquals(100, result, "Dequeue should return the first added element (100)");
+        assertFalse(queue.isEmpty(), "Queue should not be empty, el 200 is left there");
+    }
+
+    @Test
+    void shouldBeEmptyAfterDeletingAllElements() {
+        Queue<String> queue = new Queue<>();
+
+        queue.enqueue("Test");
+
+        queue.dequeue();
+
+        assertTrue(queue.isEmpty(), "Queue should be empty after deleting the only element");
+    }
 }

@@ -28,4 +28,16 @@ public class Queue<A> {
 
         current.next = newNode;
     }
+
+    public A dequeue() {
+        if (head == null) {
+            return null;
+        }
+
+        A value_to_return = head.value;
+
+        head = head.next;
+
+        return value_to_return;
+    }
 }
